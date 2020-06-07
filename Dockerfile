@@ -19,7 +19,6 @@ MAINTAINER Pradip Rawat <pradip.rawat@stratus.com>
 
 VOLUME /tmp
 
-ADD /target/*.jar app.jar
 COPY --from=maven_build /tmp/target/*.jar app.jar
 
 RUN sh -c 'touch /app.jar'
